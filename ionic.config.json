@@ -1,0 +1,7 @@
+{
+  "name": "life-story-share",
+  "type": "angular",
+  "integrations": {
+    "cordova": {}
+  }
+}
