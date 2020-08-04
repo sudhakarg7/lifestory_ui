@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="app/tabs/dashboard"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Life-story Qustions</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="card-background-page">
+
+  <ng-container *ngIf="questList">
+    <ng-container *ngFor="let quest of questList; let i = index">
+      <ion-card (click)="viewSingle(quest)">
+        <img src="assets/img/books.jpg"/>
+        <div class="card-title">{{quest.questionTitle}}</div>
+        <div class="card-subtitle">Week {{quest.week}}</div>
+        <p>click to view</p>
+      </ion-card>
+    </ng-container>
+  </ng-container>
+
+
+
+
+
+
+</ion-content>
+
+
+<!-- Chosen name: {{ createQuestForm.controls.questions.controls[i].controls.questions.value }} -->

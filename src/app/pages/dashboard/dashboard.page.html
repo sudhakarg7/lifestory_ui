@@ -1,0 +1,95 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Write Story</ion-title>
+    <!-- <ion-buttons slot="end">
+      <ion-button (click)="presentPopover($event)">
+        <ion-icon slot="icon-only" ios="ellipsis-horizontal" md="ellipsis-vertical"></ion-icon>
+      </ion-button>
+    </ion-buttons> -->
+  </ion-toolbar>
+</ion-header>
+
+<ion-content >
+  
+    <ion-grid fixed>
+      <ion-row>
+        <ng-container *ngFor="let dash of dashboard">
+        <ion-col size="12" (click)="selectQuestions()">
+          <ion-card style="background:url(assets/img/card_bg.png) center bottom; background-size: cover;">
+            <ion-card-header>
+              <ion-card-title style="color: white;">{{dash.title}}</ion-card-title>
+              <ion-card-subtitle style="color: white;">{{dash.subtitle}}</ion-card-subtitle>
+            </ion-card-header>
+          </ion-card>
+        </ion-col>
+        </ng-container>
+        </ion-row>
+        </ion-grid>
+        
+  <!-- <ion-card>
+    <ion-grid fixed>
+      <ion-row>
+        <ion-col size="6" (click)="selectQuestions()">
+          <ion-card color="tertiary">
+            <ion-card-header>
+              <ion-card-title>Title-1</ion-card-title>
+              <ion-card-subtitle>Question part -1</ion-card-subtitle>
+            </ion-card-header>
+          </ion-card>
+        </ion-col>
+        <ion-col size="6" (click)="selectQuestions()">
+          <ion-card>
+            <ion-card-header>
+              <ion-card-title>Title-2</ion-card-title>
+              <ion-card-subtitle>Question part -2</ion-card-subtitle>
+            </ion-card-header>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <ion-grid fixed>
+      <ion-row>
+        <ion-col size="6" color="success" (click)="selectQuestions()">
+          <ion-card>
+            <ion-card-header>
+              <ion-card-title>Title-3</ion-card-title>
+              <ion-card-subtitle>Question part -3</ion-card-subtitle>
+            </ion-card-header>
+          </ion-card>
+        </ion-col>
+        <ion-col size="6" color="medium" (click)="selectQuestions()">
+          <ion-card>
+            <ion-card-header>
+            <ion-card-title>Title-4</ion-card-title>
+            <ion-card-subtitle>Question part -4</ion-card-subtitle>
+            </ion-card-header>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <ion-grid fixed>
+      <ion-row>
+        <ion-col size="6" color="dark" (click)="selectQuestions()">
+          <ion-card>
+            <ion-card-header>
+              <ion-card-title>Title-5</ion-card-title>
+              <ion-card-subtitle>Question part -5</ion-card-subtitle>
+            </ion-card-header>
+          </ion-card>
+        </ion-col>
+        <ion-col size="6" color="danger" (click)="selectQuestions()">
+          <ion-card>
+            <ion-card-header>
+              <ion-card-title>Title-6</ion-card-title>
+              <ion-card-subtitle>Question part -6</ion-card-subtitle>
+            </ion-card-header>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card> -->
+</ion-content>
+

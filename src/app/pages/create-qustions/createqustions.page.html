@@ -1,0 +1,54 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="app/tabs/dashboard"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Life-story Qustions</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form class="products" [formGroup]="createQuestForm" (ngSubmit)="productSubmit()">
+
+    <ion-item color="light">
+      <ion-label position="floating">Question Title</ion-label>
+      <ion-input formControlName="questionTitle"></ion-input>
+    </ion-item>
+
+    <ion-item color="light">
+      <ion-label position="floating">Week</ion-label>
+      <ion-select formControlName="week">
+        <ion-select-option value="1">week 1</ion-select-option>
+        <ion-select-option value="2">Week 2</ion-select-option>
+        <ion-select-option value="3">Week 3</ion-select-option>
+        <ion-select-option value="4">Week 4</ion-select-option>
+        <ion-select-option value="5">Week 5</ion-select-option>
+        <ion-select-option value="6">Week 6</ion-select-option>
+        <ion-select-option value="7">Week 7</ion-select-option>
+        <ion-select-option value="8">Week 8</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ng-container formArrayName="questions" *ngFor="let item of createQuestForm.get('questions')['controls']; let i = index;">
+      <div [formGroupName]="i">
+        <ion-item color="light">
+          <ion-label position="floating">Question Type</ion-label>
+          <ion-select formControlName="type">
+            <ion-select-option value="textarea">Textarea</ion-select-option>
+            <ion-select-option value="upload">Fileupload</ion-select-option>
+          </ion-select>
+        </ion-item>
+        
+        <ion-item color="light">
+          <ion-label position="floating">Enter questions</ion-label>
+          <ion-textarea formControlName="question"></ion-textarea>
+        </ion-item>
+      </div>
+    </ng-container>
+    <ion-button expand="full" type="button" (click)="addItem()">Add Question</ion-button>
+
+    <ion-button expand="full" type="submit">Submit</ion-button>
+  </form>
+</ion-content>
+
+
+<!-- Chosen name: {{ createQuestForm.controls.questions.controls[i].controls.questions.value }} -->

@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Life-story Qustions</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form class="products" [formGroup]="qustionsForm" (ngSubmit)="productSubmit()">
+    <ion-item color="light">
+      <ion-label position="floating">What do you do?</ion-label>
+      <ion-textarea formControlName="qustion1"></ion-textarea>
+    </ion-item>
+    <ion-item color="light">
+      <ion-label position="floating">Are you married ?</ion-label>
+      <ion-textarea formControlName="qustion2"></ion-textarea>
+    </ion-item>
+    <ion-item color="light">
+      <ion-label position="floating">Why are you studying English ?</ion-label>
+      <ion-textarea formControlName="qustion3"></ion-textarea>
+    </ion-item>
+    <ion-item color="light">
+      <ion-label position="floating">Where / How did you learn English ?</ion-label>
+      <ion-textarea formControlName="qustion4"></ion-textarea>
+    </ion-item>
+    <ion-item color="light">
+      <ion-label position="floating">What do you do in your free time ?</ion-label>
+      <ion-textarea formControlName="qustion5"></ion-textarea>
+    </ion-item>
+    <ion-item color="light">
+      <ion-label position="floating">What"s the weather like? / How"s the weather ?</ion-label>
+      <ion-textarea formControlName="qustion6"></ion-textarea>
+    </ion-item>
+    <ion-item color="light">
+      <ion-label position="floating">What time is it ? / Do you have the time?</ion-label>
+      <ion-textarea formControlName="qustion7"></ion-textarea>
+    </ion-item>
+    <ion-item color="light">
+      <ion-label position="floating">Can I help you ? / Do you need any help?</ion-label>
+      <ion-textarea formControlName="qustion8"></ion-textarea>
+    </ion-item>
+    <ion-item color="light">
+      <ion-label position="floating">Description</ion-label>
+      <ion-textarea formControlName="description"></ion-textarea>
+    </ion-item>
+    <ion-button expand="full" type="submit">Submit</ion-button>
+  </form>
+</ion-content>
